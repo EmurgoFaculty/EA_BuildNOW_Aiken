@@ -1,40 +1,43 @@
-//// Basic lists map, all, any, filter, foldl, foldr
 
 use aiken/collection/list
+// Basic lists map, all, any, filter, foldl, foldr
 use aiken/collection/pairs
 
-pub const simple_list: List<Int> = [1, 2, 3, 4, 5]
+pub fn simplelist() -> List<Int> {
+  [1, 2, 3, 4, 5]
+}
 
 test testing_map() {
-  list.map(simple_list, fn(x) { x + 1 }) == [2, 3, 4, 5, 6]
+  list.map(simplelist(), fn(x) { x + 1 }) == [2, 3, 4, 5, 6]
 }
 
 test testing_all() {
-  list.all(simple_list, fn(x) { x > 0 }) == True
+  list.all(simplelist(), fn(x) { x > 0 }) == True
 }
 
 test testing_any() {
-  list.any(simple_list, fn(x) { x > 3 }) == True
+  list.any(simplelist(), fn(x) { x > 3 }) == True
 }
 
 test testing_filter() {
-  list.filter(simple_list, fn(x) { x > 3 }) == [4, 5]
+  list.filter(simplelist(), fn(x) { x > 3 }) == [4, 5]
 }
 
 test testing_foldr_acc() {
-  list.foldl(simple_list, 0, fn(acc, x) { acc + x }) == 15
+  list.foldl(simplelist(), 0, fn(acc, x) { acc + x }) == 15
 }
 
 test testing_foldl_acc() {
-  list.foldr(simple_list, 0, fn(x, acc) { acc + x }) == 15
+  list.foldr(simplelist(), 0, fn(x, acc) { acc + x }) == 15
 }
 
 test testing_foldr() {
-  list.foldl(simple_list, [], fn(x, xs) { [x, ..xs] }) == [5, 4, 3, 2, 1]
+  list.foldl(simplelist(), [], fn(x, xs) { [x, ..xs] }) == [5, 4, 3, 2, 1]
 }
 
 test tesging_foldl() {
-  list.foldr(simple_list, [], fn(x, xs) { [x, ..xs] }) == [1, 2, 3, 4, 5]
+  list.foldr(simplelist(), [], fn(x, xs) { [x, ..xs] }) == [1, 2, 3, 4, 5]
+
 }
 
 // ## Pairs (Tuples)
@@ -46,6 +49,7 @@ fn f() {
       Pair("e", 500),
     ]
 
+
   fixture
 }
 
@@ -55,3 +59,4 @@ test dfq() {
     Pair("e", 503),
   ]
 }
+

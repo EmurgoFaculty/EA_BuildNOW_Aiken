@@ -2,13 +2,17 @@
 
 use aiken/collection/list.{drop, take}
 
+
 // ## With parenthesis nesting
+
 
 fn just_Joe() -> List<ByteArray> {
   take(drop(["H", "e", "l", "l", "o", " ", "J", "o", "e", "!"], 6), 3)
 }
 
+
 // ## With pipelines
+
 
 fn just_Mike() -> List<ByteArray> {
   ["H", "e", "l", "l", "o", " ", "M", "i", "k", "e", "!"]

@@ -1,5 +1,7 @@
+
 //// 1. High Order functions
 //// As other functional languages, Aiken has first-class functions. This means that functions can be passed as arguments to other functions, returned as values from other functions, and assigned to variables.
+
 
 fn twice(f: fn(t) -> t, x: t) -> t {
   f(f(x))
@@ -32,6 +34,7 @@ test select_function_test() {
 test assign_function_test() {
   let f: fn(Int) -> Int = select_function(1)
   let g: fn(Int) -> Int = select_function(-1)
+
 
   f(3) == 5 && g(3) == 1
 }

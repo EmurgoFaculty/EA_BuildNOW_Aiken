@@ -1,0 +1,10 @@
+
+validator types(){
+    spend(datum: Option<Data>, redeemer: Data, target: OutputReference, tx_info: Transaction)
+    // mint(target: PolicyID, tx_info: Transaction)
+    // withdraw(target: Account, tx_info: Transaction)
+    // publish(target: Certificate, tx_info: Transaction)
+    // vote(target: Voter, tx_info: Transaction)
+    // propose(target: ProposalProcedure, tx_info: Transaction)
+
+}

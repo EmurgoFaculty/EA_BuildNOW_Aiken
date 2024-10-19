@@ -2,6 +2,7 @@
 
 // ## Ints
 
+
 pub const pi: Int = 314159265359
 
 pub fn circle_area(radius: Int) -> Int {
@@ -16,6 +17,7 @@ pub fn circle_circumference(radius: Int) -> Int {
 
 pub const failed_answer: Bool = False
 
+
 pub fn da_question(da_answer: Bool) -> Bool {
   if da_answer {
     True
@@ -26,6 +28,7 @@ pub fn da_question(da_answer: Bool) -> Bool {
 
 // ## ByteArray
 
+
 pub fn even_or_odd_if(x: Int) -> ByteArray {
   if x % 2 == 0 {
     "even"
@@ -35,6 +38,7 @@ pub fn even_or_odd_if(x: Int) -> ByteArray {
 }
 
 // ## Lists
+
 
 pub const list_of_tokens = ["Sundae", "Meld", "Iagon", "Minswap"]
 
@@ -53,9 +57,11 @@ pub const just_a_tuple = (5, "six")
 // ## Tests
 
 test area_test_set4() {
-  circle_area(10) == 31415926535900
+
+  circleArea(10) == 31415926535900
 }
 
 test circumference_test_set4() {
-  circle_circumference(10) == 6283185307180
+  circleCircumference(10) == 6283185307180
+
 }
